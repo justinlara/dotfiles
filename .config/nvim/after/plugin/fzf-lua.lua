@@ -1,0 +1,8 @@
+vim.keymap.set('n', '<leader>ff', '<cmd>FzfLua files<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fg', '<cmd>FzfLua live_grep_native<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fh', '<cmd>FzfLua history<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua buffers<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fw', '<cmd>FzfLua grep_cword<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fW', '<cmd>FzfLua grep_cWORD<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fo', '<cmd>FzfLua oldfiles<cr>', { remap = false })
+vim.keymap.set('n', '<leader>fp', '<cmd>FzfLua grep_project<cr>', { remap = false })
