@@ -15,7 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Setup lazy.nvim
 require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
@@ -23,35 +22,9 @@ require("lazy").setup({
 
   { 'nvim-treesitter/nvim-treesitter', lazy = false,  branch = 'main', build = ':TSUpdate' },
 
-
-
-  -- {
-  --   "nvim-telescope/telescope.nvim",
-  --   branch = "master",
-  --   dependencies = {
-  --     'nvim-lua/plenary.nvim',
-  --     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  --   },
-  -- },
-
-  --{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-
   { 'nvim-tree/nvim-web-devicons', opts = {} },
 
-  {
-    'ibhagwan/fzf-lua',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-  },
-
-  -- {
-  --   'nvim-neo-tree/neo-tree.nvim',
-  --   branch = "v3.x",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "MunifTanjim/nui.nvim",
-  --   },
-  --   lazy = false,
-  -- },
+  { 'ibhagwan/fzf-lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
 
   { 'neovim/nvim-lspconfig' },
 
@@ -60,5 +33,4 @@ require("lazy").setup({
   {'tpope/vim-fugitive' },
 
   { 'vim-test/vim-test' },
-
 })
